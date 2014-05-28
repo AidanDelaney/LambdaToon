@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.lambdau.toon" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>LambdaToon</name>
+    <description>
+        An application that uses your devices camera to make stop motion videos.
+    </description>
+    <author email="aidan@ontologyengineering.org" href="http://ontologyengineering.org">
+        Aidan Delaney
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+</widget>

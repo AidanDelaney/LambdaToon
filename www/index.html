@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Stop Motion</title>
+      <meta charset="utf-8">
+        <link rel="stylesheet" href="css/index.css" />
+        <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+        <script type="text/javascript" charset="utf-8" src="js/camera.js"></script>
+    </head>
+    <body class="app">
+        <header class="header">
+            <h1>Stop Motion</h1>
+        </header>
+        <div class="content">
+            <div class="result-area ch50">
+                <div id="results">
+                  <img style="display:none;margin:5px auto; width:120px; height:120px;" id="smallImage" src="" />
+                </div>
+                <div class="separator"></div>
+            </div>
+            <div class="action-area ch50">
+                <button class="button dh" id="capturePhotoButton">Add Frame</button>
+            </div>
+            <script type="text/javascript">
+             document.addEventListener("deviceready", onDeviceReady, false);
+
+             function id(element) {
+               return document.getElementById(element);
+             }
+
+             function onDeviceReady() {
+               cameraApp = new cameraApp();
+               cameraApp.run();
+             }
+            </script>
+        </div>
+    </body>
+</html>
