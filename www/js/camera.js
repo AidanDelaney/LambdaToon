@@ -33,6 +33,8 @@ cameraApp.prototype={
         var results = id('results');
         var smallImage = document.createElement("img");
         smallImage.style.display = 'block';
+        smallImage.style.width  = '120px';
+        smallImage.style.height = '120px';
 
         // Show the captured photo.
         smallImage.src = "data:image/jpeg;base64," + imageData;
