@@ -1,4 +1,10 @@
 // Taken from the Cordova API examples
+
+// shorthand
+function id(element) {
+    return document.getElementById(element);
+}
+
 function cameraApp(){}
 
 cameraApp.prototype={
@@ -12,6 +18,7 @@ cameraApp.prototype={
         that._destinationType = navigator.camera.DestinationType;
         id("capturePhotoButton").addEventListener("click", function(){
             that._capturePhoto.apply(that,arguments);
+            id("capturePhotoButton").scrollIntoView();
         });
     },
 
@@ -39,6 +46,7 @@ cameraApp.prototype={
 
         li.appendChild(img);
         results.appendChild(li);
+        console.log(li.outerHTML);
     },
 
     _onFail: function(message) {
