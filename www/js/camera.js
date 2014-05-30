@@ -41,12 +41,11 @@ cameraApp.prototype={
         var li  = document.createElement("li");
         var img = document.createElement("img");
 
-        li.classList.add('thumbnail');
+        img.classList.add('thumbnail');
         img.src = "data:image/jpeg;base64," + imageData;
 
         li.appendChild(img);
         results.appendChild(li);
-        console.log(li.outerHTML);
     },
 
     _onFail: function(message) {
