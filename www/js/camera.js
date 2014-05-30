@@ -6,10 +6,6 @@ cameraApp.prototype={
 
     _destinationType: null,
 
-    gallery: function(gallery){
-        this._gallery = gallery;
-    },
-
     run: function(){
         var that=this;
         that._pictureSource = navigator.camera.PictureSourceType;
@@ -34,23 +30,15 @@ cameraApp.prototype={
     },
 
     _onPhotoDataSuccess: function(imageData) {
+        var results = document.getElementById("thumbnails");
         var li  = document.createElement("li");
-        var a   = document.createElement("a");
         var img = document.createElement("img");
-        var uuid = generateUUID();
 
-        //a.href = '#' + uuid;
-        // complete and total hack
-        a.href = "data:image/jpeg;base64," + imageData;
-        a.classList.add('thumb');
-
-        // Show the captured photo.
-        img.id  = uuid;
+        li.classList.add('thumbnail');
         img.src = "data:image/jpeg;base64," + imageData;
 
-        a.appendChild(img);
-        li.appendChild(a);
-        this._gallery.insertImage(li.outerHTML, this._gallery.data.length);
+        li.appendChild(img);
+        results.appendChild(li);
     },
 
     _onFail: function(message) {
