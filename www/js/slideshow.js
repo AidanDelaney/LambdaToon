@@ -25,7 +25,8 @@ SlideShow.prototype = {
         var nxt = this.iterator.next();
         if(!nxt.done) {
             var ctx = this.canvas.getContext('2d');
-            ctx.drawImage(nxt.value, 0, 0);
+            // FIXME: hard coding width & height
+            ctx.drawImage(nxt.value, 0, 0, 1024, 768);
         } else {
             this.stop();
         }
